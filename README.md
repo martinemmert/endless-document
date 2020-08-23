@@ -32,4 +32,4 @@ Overall I am really happy with what workflowy offers as a tool and I enjoy using
 
 ## License
 
-[MIT](
+[MIT](https://choosealicense.com/licenses/mit/)
