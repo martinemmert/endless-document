@@ -1,0 +1,17 @@
+*.lock
+*.hbs
+*.css
+.*
+!.*.*
+*.storyshot
+__tests__
+__recordings__
+generated/
+.gitlab-ci.yml
+Dockerfile
+*.Dockerfile
+.dockerignore
+nginx.conf
+*.har
+*.snap
+*.svg

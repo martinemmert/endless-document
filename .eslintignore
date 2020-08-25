@@ -1,0 +1,9 @@
+node_modules/
+build/
+dist/
+coverage/
+__mocks__/
+**/generated/
+!.*.js
+*.bundle.*
+storybook-static
