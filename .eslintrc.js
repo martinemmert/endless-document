@@ -183,12 +183,10 @@ module.exports = {
       },
     ],
     "node/no-process-exit": "error",
-    "node/no-unsupported-features/es-syntax": [
-      "error",
-      {
-        ignores: ["modules"],
-      },
-    ],
+    // The code is transpiled and most features are pretty stable when they are
+    // added to Node.js. Thus, these rules are not needed.
+    "node/no-unsupported-features/es-builtins": "off",
+    "node/no-unsupported-features/es-syntax": "off",
     // TODO: Activate this as soon as we have environment variables encapsulated
     // as configuration module.
     // "node/no-process-env": "error",
@@ -293,6 +291,13 @@ module.exports = {
         "plugin:jest/style",
         "plugin:testing-library/react",
       ],
+    },
+    {
+      files: ["jest.setup.js"],
+      rules: {
+        "node/no-unpublished-require": 0,
+        "node/no-missing-require": 0,
+      },
     },
   ],
 };
