@@ -285,6 +285,11 @@ module.exports = {
       // Special handle test files.
       files: ["*.spec.@(j|t)s?(x)"],
       plugins: ["jest", "jest-dom", "jest-formatting", "testing-library"],
+      rules: {
+        "node/no-unpublished-import": "off",
+        "node/no-unpublished-require": "off",
+        "node/no-missing-require": "off",
+      },
       extends: [
         "plugin:jest-dom/recommended",
         "plugin:jest/recommended",
@@ -295,6 +300,7 @@ module.exports = {
     {
       files: ["jest.setup.js"],
       rules: {
+        "node/no-unpublished-import": 0,
         "node/no-unpublished-require": 0,
         "node/no-missing-require": 0,
       },
