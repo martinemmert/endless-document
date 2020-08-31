@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots App / Editor Default Story 1`] = `
+<div>
+  <div
+    data-testid="root-document-node"
+  >
+    <ul
+      className="list-disc list-inside"
+    />
+  </div>
+  <button
+    data-testid="add-document-node-button"
+    onClick={[Function]}
+  >
+    Add
+  </button>
+</div>
+`;
