@@ -4,21 +4,11 @@ exports[`Storyshots App / Editor Default Story 1`] = `
 <div>
   <div
     data-testid="root-document-node"
-  />
-  <button
-    data-testid="add-document-node-button"
-    onClick={[Function]}
   >
-    Add
-  </button>
-</div>
-`;
-
-exports[`Storyshots App / Editor Logo Story 1`] = `
-<div>
-  <div
-    data-testid="root-document-node"
-  />
+    <ul
+      className="list-disc list-inside"
+    />
+  </div>
   <button
     data-testid="add-document-node-button"
     onClick={[Function]}
