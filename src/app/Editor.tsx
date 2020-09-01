@@ -26,16 +26,16 @@ const useDocumentNodes = () => {
 };
 
 export const Editor = () => {
-  const newNodeInputReference = React.useRef<HTMLInputElement>();
+  const newNodeInputReference = React.useRef<HTMLInputElement | null>(null);
 
   const documentNodes = useDocumentNodes();
-  const [currentNode, setCurrentNode] = React.useState<DocumentNode | undefined>();
+  const [currentNode, setCurrentNode] = React.useState<DocumentNode | null>(null);
 
   const createNewNode = () => setCurrentNode(documentNodes.create());
   const deleteNode = (id) => documentNodes.remove(id);
 
   React.useEffect(() => {
-    if (currentNode && newNodeInputReference.current) {
+    if (currentNode !== null && newNodeInputReference.current !== null) {
       newNodeInputReference.current.focus();
     }
   }, [currentNode]);
@@ -45,7 +45,7 @@ export const Editor = () => {
       <div data-testid="root-document-node">
         <ul className="list-disc list-inside">
           {documentNodes.values.map((value) => {
-            if (currentNode && value.id === currentNode.id) {
+            if (currentNode !== null && value.id === currentNode.id) {
               return (
                 <li data-testid="new-document-node" key={currentNode.id}>
                   <input
