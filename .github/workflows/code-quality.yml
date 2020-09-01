@@ -18,7 +18,6 @@ jobs:
       with:
         node-version: '12'
     - run: yarn install
-    - run: yarn commitlint --from origin/master --verbose
     - run: yarn lint
     - run: yarn lint:types
     - uses: mattallty/jest-github-action@v1
