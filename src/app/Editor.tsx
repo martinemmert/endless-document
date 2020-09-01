@@ -61,6 +61,11 @@ export const Editor = () => {
                         setCurrentNode(null);
                         event.preventDefault();
                       }
+                      if (event.key === "Backspace" && event.currentTarget.value === "") {
+                        setCurrentNode(null);
+                        deleteNode(value.id);
+                        event.preventDefault();
+                      }
                     }}
                     onBlur={() => {
                       setCurrentNode(null);
