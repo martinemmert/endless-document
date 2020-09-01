@@ -4,7 +4,7 @@ import React from "react";
 import { Editor } from "../Editor";
 
 
-describe.only("As a user, I want to delete any of my written down bullet points so that I can keep only what is meaningful to me.", () => {
+describe("As a user, I want to delete any of my written down bullet points so that I can keep only what is meaningful to me.", () => {
   afterEach(cleanup);
   it("should delete a bullet point by clicking its delete button", async () => {
     const screen = render(<Editor />);
