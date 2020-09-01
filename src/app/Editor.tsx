@@ -19,6 +19,9 @@ const useDocumentNodes = () => {
       documentNodes.set(node.id, node);
       return node;
     },
+    remove: (id) => {
+      documentNodes.delete(id);
+    },
   };
 };
 
@@ -29,6 +32,7 @@ export const Editor = () => {
   const [currentNode, setCurrentNode] = React.useState<DocumentNode | undefined>();
 
   const createNewNode = () => setCurrentNode(documentNodes.create());
+  const deleteNode = (id) => documentNodes.remove(id);
 
   React.useEffect(() => {
     if (currentNode && newNodeInputReference.current) {
@@ -82,6 +86,16 @@ export const Editor = () => {
                 }}
               >
                 <span>{value.content}</span>
+                <button
+                  type="button"
+                  aria-label={`Delete bullet point ${value.content}`}
+                  onClick={(event) => {
+                    deleteNode(value.id);
+                    event.preventDefault();
+                  }}
+                >
+                  delete
+                </button>
               </li>
             );
             /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
