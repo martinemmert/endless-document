@@ -1,5 +1,3 @@
-// eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable node/no-unpublished-import */
 import path from "path";
 import React from "react";
 import ReactDOM from "react-dom";
